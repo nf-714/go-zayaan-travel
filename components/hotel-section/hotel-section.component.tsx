@@ -38,7 +38,7 @@ export default function HotelSectionComponent() {
           <div className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer">
             <div className="relative h-96">
               <img
-                src="https://images.unsplash.com/photo-1508009603885-50cf7c079365?q=80&w=2940&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?q=80&w=1474&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="B Nayar Villas"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />

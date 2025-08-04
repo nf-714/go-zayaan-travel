@@ -6,19 +6,15 @@ export default function BookingComponent() {
     <section className="py-20 px-6 lg:px-12 bg-zinc-900">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="flex items-center justify-between mb-12">
+        <div className="flex items-center justify-between mb-4">
           <div className="flex items-center space-x-3">
             <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
               <span className="text-gray-400 text-sm font-medium">
                 Recommendation
               </span>
             </div>
           </div>
-          <button className="flex items-center space-x-2 bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors">
-            <span>See More</span>
-            <ArrowRight className="w-4 h-4" />
-          </button>
         </div>
 
         {/* Title */}
@@ -61,7 +57,7 @@ export default function BookingComponent() {
             <div className="relative h-48">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://images.unsplash.com/photo-1508009603885-50cf7c079365?q=80&w=2940&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?q=80&w=1474&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Bangkok canal"
                 className="w-full h-full object-cover rounded-xl"
               />
