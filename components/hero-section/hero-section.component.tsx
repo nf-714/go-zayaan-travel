@@ -1,5 +1,6 @@
 import Navigation from "@/components/navigation/navigation.component";
 import { Button } from "@/components/ui/button";
+import HeroVideo from "@/public/video/hero-video.mp4";
 import { MapPin } from "lucide-react";
 import { motion } from "motion/react";
 import Link from "next/link";
@@ -23,10 +24,7 @@ export default function HeroSectionComponent() {
             className="w-full h-full object-cover"
             style={{ filter: "brightness(0.4)" }}
           >
-            <source
-              src="https://f1pl1h42g5.ufs.sh/f/S0nwnmaGkaqoO0mXmrcLmcq5fk2Z9LFASRpEhy6KCXvo04wP"
-              type="video/mp4"
-            />
+            <source src={HeroVideo} type="video/mp4" />
           </video>
           {/* Gradient overlay for image blending */}
 
