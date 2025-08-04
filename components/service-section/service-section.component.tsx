@@ -28,7 +28,7 @@ export default function ServiceComponent() {
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          Explore endless options with our service
+          Book your Flight with seamless experience
         </motion.h2>
         <motion.p
           className="text-gray-600 text-lg max-w-2xl leading-relaxed"
@@ -37,8 +37,9 @@ export default function ServiceComponent() {
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          Discover a myriad of choices available through our service, offering
-          limitless possibilities for your exploration and enjoyment
+          Discover a myriad of flight choices available through our service,
+          offering limitless flying possibilities for your exploration and
+          enjoyment
         </motion.p>
       </motion.div>
 
@@ -51,8 +52,6 @@ export default function ServiceComponent() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           viewport={{ once: true }}
-          whileHover={{ scale: 1.02 }}
-          transition={{ duration: 0.3 }}
         >
           <Image
             src="/bentoimg-1.jpg"
@@ -69,11 +68,11 @@ export default function ServiceComponent() {
             viewport={{ once: true }}
           >
             <h3 className="text-2xl font-medium mb-3">
-              Comprehensive Travel Support
+              Comprehensive Hotel and Travel Support
             </h3>
             <p className="text-white/90 text-sm leading-relaxed max-w-xs">
-              24/7 customer service to assist you before, during, and after your
-              trip
+              From Airport to Hotel, GoZayaan manages all. 24/7 customer service
+              to assist you.
             </p>
           </motion.div>
         </motion.div>
@@ -88,7 +87,6 @@ export default function ServiceComponent() {
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
             viewport={{ once: true }}
             whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.3 }}
           >
             <Image
               src="/bentoimg-2.jpg"
@@ -104,9 +102,11 @@ export default function ServiceComponent() {
               transition={{ duration: 0.6, delay: 1.0, ease: "easeOut" }}
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-medium mb-2">Expert Travel Advice</h3>
+              <h3 className="text-xl font-medium mb-2">
+                Seamless Travel System for flight tickting
+              </h3>
               <p className="text-white/90 text-sm leading-relaxed max-w-xs">
-                Tips and guides to enhance your travel experience
+                Easy and seamless flight booking system that's save times
               </p>
             </motion.div>
           </motion.div>
@@ -119,7 +119,6 @@ export default function ServiceComponent() {
             transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
             whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.3 }}
           >
             <Image
               src="/bentoimg-3.jpg"
@@ -135,9 +134,12 @@ export default function ServiceComponent() {
               transition={{ duration: 0.6, delay: 1.2, ease: "easeOut" }}
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-medium mb-2">Diverse Destinations</h3>
+              <h3 className="text-xl font-medium mb-2">
+                Diverse Destinations with Diverse Hotel
+              </h3>
               <p className="text-white/90 text-sm leading-relaxed max-w-xs">
-                Explore a myriad range of cultural and international locations
+                Explore a myriad range of hotels suitable for you and your trip
+                journey!
               </p>
             </motion.div>
           </motion.div>
