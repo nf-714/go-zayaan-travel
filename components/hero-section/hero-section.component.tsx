@@ -1,6 +1,7 @@
 import Navigation from "@/components/navigation/navigation.component";
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
+import { motion } from "motion/react";
 import Link from "next/link";
 import { WordRotate } from "../magicui/word-rotate";
 
@@ -38,35 +39,72 @@ export default function HeroSectionComponent() {
           <Navigation />
           {/* Hero Content */}
           <div className="flex flex-col items-center justify-center min-h-[80vh] px-6 text-center">
-            <h1 className="text-white text-lg font-light">
+            <motion.h1
+              className="text-white text-lg font-light"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
               Welcome to our GoZayaan - Where unforgettable experience awaits!
-            </h1>
+            </motion.h1>
 
-            <h1 className="text-5xl md:text-6xl lg:text-9xl font-light text-white mb-8 drop-shadow-2xl">
+            <motion.h1
+              className="text-5xl md:text-6xl lg:text-9xl font-light text-white mb-8 drop-shadow-2xl"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+            >
               Plan Your Next
-            </h1>
-            <span className=" font-inconsolata text-4xl md:text-6xl lg:text-9xl text-white mb-8 drop-shadow-2xl">
+            </motion.h1>
+            <motion.span
+              className=" font-inconsolata text-4xl md:text-6xl lg:text-9xl text-white mb-8 drop-shadow-2xl"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
+            >
               <WordRotate
                 words={["Adventure", "Escape", "Dream", "Getaway", "Journey"]}
               />
-            </span>
-            <p className="mb-4 text-lg md:text-xl text-center text-gray-400">
+            </motion.span>
+            <motion.p
+              className="mb-4 text-lg md:text-xl text-center text-gray-400"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.9, ease: "easeOut" }}
+            >
               Discover Sri Lanka like never before — from hidden gems to
               top-rated stays, all in one seamless platform built for locals.
-            </p>
+            </motion.p>
 
             {/* Search Form */}
-            <div className="flex flex-col justify-center items-center md:flex-row gap-4 mb-8 w-full max-w-4xl">
-              <Link href="/hotel">
-                <Button className="bg-white text-gray-900 hover:bg-gray-100 px-8 py-3 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300">
-                  Explore Hotels
-                </Button>
-              </Link>{" "}
-              <Link href="/flight">
-                <Button className="bg-blue-800 text-gray-100 hover:bg-gray-100 px-8 py-3 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300">
-                  Book your Flight Now!
-                </Button>
-              </Link>
+            <motion.div
+              className="flex flex-col justify-center items-center md:flex-row gap-4 mb-8 w-full max-w-4xl"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.2, ease: "easeOut" }}
+            >
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ duration: 0.2 }}
+              >
+                <Link href="/hotel">
+                  <Button className="bg-white text-gray-900 hover:bg-gray-100 px-8 py-3 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300">
+                    Explore Hotels
+                  </Button>
+                </Link>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ duration: 0.2 }}
+              >
+                <Link href="/flight">
+                  <Button className="bg-blue-800 text-gray-100 hover:bg-gray-100 px-8 py-3 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300">
+                    Book your Flight Now!
+                  </Button>
+                </Link>
+              </motion.div>
               {/*<Select>
                 <SelectTrigger className="bg-white/15 border-white/30 text-white placeholder:text-white/80 backdrop-blur-md shadow-lg">
                   <SelectValue placeholder="Search destination" />
@@ -102,34 +140,55 @@ export default function HeroSectionComponent() {
                   <SelectItem value="family">Family</SelectItem>
                 </SelectContent>
               </Select>*/}
-            </div>
+            </motion.div>
           </div>
 
           {/* Bottom Section */}
           <div className="absolute bottom-0 left-0 right-0">
-            <div className="hidden md:flex lg:flex flex-col md:flex-row justify-between items-start md:items-end p-6 lg:p-12">
-              <div className="text-white mb-4 md:mb-0">
+            <motion.div
+              className="hidden md:flex lg:flex flex-col md:flex-row justify-between items-start md:items-end p-6 lg:p-12"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.5, ease: "easeOut" }}
+            >
+              <motion.div
+                className="text-white mb-4 md:mb-0"
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 1.7, ease: "easeOut" }}
+              >
                 <p className="hidden md:flex lg:flex text-lg mb-2 drop-shadow-lg">
                   Book your travel and transportation service with us
                 </p>
                 <p className="text-white/90 drop-shadow-lg">
                   and enjoy a hassle-free and memorable journey
                 </p>
-              </div>
+              </motion.div>
 
-              <div className="flex items-center space-x-4">
+              <motion.div
+                className="flex items-center space-x-4"
+                initial={{ opacity: 0, x: 30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 1.9, ease: "easeOut" }}
+              >
                 <div className="flex items-center space-x-2 text-white drop-shadow-lg">
                   <MapPin className="w-4 h-4" />
                   <span className="text-sm">Bali, Indonesia</span>
                 </div>
-                <Button
-                  variant="outline"
-                  className="border-white/50 text-white hover:bg-white hover:text-gray-900 rounded-full px-6 bg-white/10 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300"
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.2 }}
                 >
-                  Do trip now →
-                </Button>
-              </div>
-            </div>
+                  <Button
+                    variant="outline"
+                    className="border-white/50 text-white hover:bg-white hover:text-gray-900 rounded-full px-6 bg-white/10 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300"
+                  >
+                    Do trip now →
+                  </Button>
+                </motion.div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </div>

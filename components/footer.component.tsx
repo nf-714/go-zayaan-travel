@@ -7,6 +7,7 @@ import {
   Twitter,
   Youtube,
 } from "lucide-react";
+import { motion } from "motion/react";
 
 function GoZayaanLogo() {
   return (
@@ -54,187 +55,244 @@ function GoZayaanLogo() {
 }
 
 export default function FooterComponent() {
+  const socialIcons = [
+    { icon: Facebook, href: "#" },
+    { icon: Instagram, href: "#" },
+    { icon: Twitter, href: "#" },
+    { icon: Youtube, href: "#" },
+  ];
+
+  const quickLinks = [
+    "Home",
+    "About Us",
+    "Our Services",
+    "Travel Packages",
+    "Destinations",
+    "Contact",
+  ];
+
+  const services = [
+    "Flight Booking",
+    "Hotel Reservations",
+    "Tour Packages",
+    "Car Rentals",
+    "Travel Insurance",
+    "Visa Services",
+  ];
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">
-            <div className="mb-6">
+          <motion.div
+            className="lg:col-span-1"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            <motion.div
+              className="mb-6"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
               <GoZayaanLogo />
-            </div>
-            <p className="text-gray-400 mb-6 leading-relaxed">
+            </motion.div>
+            <motion.p
+              className="text-gray-400 mb-6 leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
               Your trusted partner for unforgettable travel experiences. We make
               your travel dreams come true with expert guidance and
               comprehensive support.
-            </p>
+            </motion.p>
             <div className="flex space-x-4">
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Youtube className="w-5 h-5" />
-              </a>
+              {socialIcons.map((social, index) => (
+                <motion.a
+                  key={index}
+                  href={social.href}
+                  className="text-gray-400 hover:text-white transition-colors"
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    duration: 0.6,
+                    delay: 0.6 + index * 0.1,
+                    ease: "easeOut",
+                  }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <social.icon className="w-5 h-5" />
+                </motion.a>
+              ))}
             </div>
-          </div>
+          </motion.div>
 
           {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            <motion.h3
+              className="text-lg font-semibold mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
+              Quick Links
+            </motion.h3>
             <ul className="space-y-3">
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
+              {quickLinks.map((link, index) => (
+                <motion.li
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{
+                    duration: 0.6,
+                    delay: 0.6 + index * 0.1,
+                    ease: "easeOut",
+                  }}
+                  viewport={{ once: true }}
                 >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Our Services
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Travel Packages
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Destinations
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Contact
-                </a>
-              </li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    {link}
+                  </a>
+                </motion.li>
+              ))}
             </ul>
-          </div>
+          </motion.div>
 
           {/* Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6">Services</h3>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            <motion.h3
+              className="text-lg font-semibold mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
+              Services
+            </motion.h3>
             <ul className="space-y-3">
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
+              {services.map((service, index) => (
+                <motion.li
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{
+                    duration: 0.6,
+                    delay: 0.8 + index * 0.1,
+                    ease: "easeOut",
+                  }}
+                  viewport={{ once: true }}
                 >
-                  Flight Booking
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Hotel Reservations
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Tour Packages
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Car Rentals
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Travel Insurance
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Visa Services
-                </a>
-              </li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    {service}
+                  </a>
+                </motion.li>
+              ))}
             </ul>
-          </div>
+          </motion.div>
 
           {/* Contact Info */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6">Contact Info</h3>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            <motion.h3
+              className="text-lg font-semibold mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
+              Contact Info
+            </motion.h3>
             <div className="space-y-4">
-              <div className="flex items-start space-x-3">
+              <motion.div
+                className="flex items-start space-x-3"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 1.0, ease: "easeOut" }}
+                viewport={{ once: true }}
+              >
                 <MapPin className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-400">
                   123 Travel Street, Jakarta, Indonesia 12345
                 </p>
-              </div>
-              <div className="flex items-center space-x-3">
+              </motion.div>
+              <motion.div
+                className="flex items-center space-x-3"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 1.2, ease: "easeOut" }}
+                viewport={{ once: true }}
+              >
                 <Phone className="w-5 h-5 text-blue-400 flex-shrink-0" />
                 <p className="text-gray-400">+62 21 1234 5678</p>
-              </div>
-              <div className="flex items-center space-x-3">
+              </motion.div>
+              <motion.div
+                className="flex items-center space-x-3"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 1.4, ease: "easeOut" }}
+                viewport={{ once: true }}
+              >
                 <Mail className="w-5 h-5 text-blue-400 flex-shrink-0" />
                 <p className="text-gray-400">info@gozayaan.com</p>
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
+        <motion.div
+          className="border-t border-gray-800 mt-12 pt-8"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm mb-4 md:mb-0">
+            <motion.p
+              className="text-gray-400 text-sm mb-4 md:mb-0"
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 1.0, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
               © 2024 GoZayaan. All rights reserved.
-            </p>
-            <div className="flex space-x-6 text-sm">
+            </motion.p>
+            <motion.div
+              className="flex space-x-6 text-sm"
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 1.2, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
               <a
                 href="#"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -253,9 +311,9 @@ export default function FooterComponent() {
               >
                 Cookie Policy
               </a>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </footer>
   );

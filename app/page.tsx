@@ -1,3 +1,5 @@
+"use client";
+
 import AboutSectionComponent from "@/components/about-section/about-section.component";
 import BookingComponent from "@/components/booking-section/booking.component";
 import DiscoverySectionComponent from "@/components/discovery-section/discovery-section.component";
