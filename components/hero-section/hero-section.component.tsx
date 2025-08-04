@@ -1,11 +1,14 @@
 import Navigation from "@/components/navigation/navigation.component";
 import { Button } from "@/components/ui/button";
+import HeroVideo from "@/public/video/hero-video.mp4";
 import { MapPin } from "lucide-react";
 import Link from "next/link";
-import HeroVideo from "../../public/video/hero-video.mp4";
 import { WordRotate } from "../magicui/word-rotate";
 
+//change in video haha
+
 export default function HeroSectionComponent() {
+  console.log("working");
   return (
     <div className="min-h-screen bg-zinc-150 px-3">
       {/* Hero Section */}

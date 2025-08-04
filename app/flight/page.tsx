@@ -18,7 +18,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { Check } from "lucide-react";
 import { useState } from "react";
-import HeroVideo from "../../public/video/flight-hero.mp4";
+import HeroVideo from "../public/video/flight-hero.mp4";
 
 // Import components
 import { FlightCard } from "@/components/flight/FlightCard";
