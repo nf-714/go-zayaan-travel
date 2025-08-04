@@ -1,6 +1,6 @@
 import Navigation from "@/components/navigation/navigation.component";
 import { Button } from "@/components/ui/button";
-import HeroVideo from "@/public/video/hero-video.mp4";
+import HeroVideo from "@/public/video/hero-2.mp4";
 import { MapPin } from "lucide-react";
 import { motion } from "motion/react";
 import Link from "next/link";
