@@ -11,9 +11,9 @@ import { WordRotate } from "../magicui/word-rotate";
 export default function HeroSectionComponent() {
   console.log("working");
   return (
-    <div className="min-h-screen bg-zinc-150 px-3">
+    <div className="min-h-screen bg-zinc-150">
       {/* Hero Section */}
-      <div className="relative h-[98vh] overflow-hidden  rounded-b-3xl">
+      <div className="relative h-[100vh] overflow-hidden">
         {/* Video Background */}
         <div className="absolute inset-0 w-full h-full z-0">
           <video

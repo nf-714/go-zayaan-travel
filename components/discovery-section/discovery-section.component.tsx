@@ -15,9 +15,9 @@ export default function DiscoverySectionComponent() {
           <span className="text-blue-600">discover</span>{" "}
           <motion.span
             className="inline-block w-48 h-24 lg:w-32 lg:h-16 overflow-hidden mx-2 rounded-full align-middle"
-            initial={{ scale: 0, rotate: -180 }}
-            whileInView={{ scale: 1, rotate: 0 }}
-            transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
           >
             <video
@@ -36,9 +36,9 @@ export default function DiscoverySectionComponent() {
           world that&apos;s
           <motion.span
             className="inline-block w-48 h-24 lg:w-32 lg:h-16 overflow-hidden mx-2 rounded-full align-middle"
-            initial={{ scale: 0, rotate: 180 }}
-            whileInView={{ scale: 1, rotate: 0 }}
-            transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
           >
             <video
